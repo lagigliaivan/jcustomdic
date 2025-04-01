@@ -37,4 +37,16 @@ public class DictTest {
        assertEquals(true, d.Contains("world hell"));
        assertEquals(true, d.Contains("world hello"));
     }
+
+    @Test
+    public void Remove(){
+        Dictionary dic = new Dictionary();
+        dic.Add("hello");
+        dic.Add("bye");
+
+        dic.Remove("bye");
+
+        assertEquals(true, dic.Contains("hello"));
+        assertEquals(false, dic.Contains("bye"));
+    }
 }
